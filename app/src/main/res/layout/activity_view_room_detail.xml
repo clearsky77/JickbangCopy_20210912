@@ -18,6 +18,7 @@
         android:gravity="center"
         android:padding="20dp">
             <TextView
+                android:id="@+id/priceTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
@@ -25,6 +26,7 @@
                 android:textColor="@color/black"
                 android:text="가격 자리"/>
             <TextView
+                android:id="@+id/descriptionTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -57,6 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"/>
                 <TextView
+                    android:id="@+id/addressTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -83,6 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
             <TextView
+                android:id="@+id/floorTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
