@@ -1,5 +1,6 @@
 package com.clearsky77.jickbangcopy_20210912
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -29,6 +30,14 @@ class MainActivity : AppCompatActivity() {
 
         mRoomAdapter = RoomAdapter(this, R.layout.room_list_item, mRoomList)
         roomListView.adapter = mRoomAdapter //main.xml에 listView의 어댑터가 되도록.
+
+        roomListView.setOnItemClickListener { adapterView, view, position, l ->
+            val clickedRoom = mRoomList[position]
+            val myIntent = Intent(this, ViewRoomDetailActivity::class.java)
+            myIntent.putExtra("roomData",clickedRoom) // roomData를 Serializable 명시해줌.
+
+            startActivity(myIntent)
+        }
 
     }
 }

@@ -1,5 +1,6 @@
 package com.clearsky77.jickbangcopy_20210912.datas
 
+import java.io.Serializable
 import java.text.NumberFormat
 import java.util.*
 
@@ -7,7 +8,7 @@ class RoomData (
     val price: Int,
     val address: String,
     val floor: Int,
-    val description: String) {
+    val description: String) : Serializable {
 
     fun getFormattedPrice():String{
         // 1. 1억이 넘지 않는 경우
