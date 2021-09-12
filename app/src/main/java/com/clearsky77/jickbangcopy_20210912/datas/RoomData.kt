@@ -29,4 +29,17 @@ class RoomData (
 
     }
 
+    fun getFormattedFloor(): String {
+        // 1. 양수인 경우 => "floor층"
+        // 2. 0인 경우 => "반지하"
+        // 3. 음수인 경우 => "지하?층"
+        if(this.floor>0){
+            return "${this.floor}층"
+        }else if(this.floor==0){
+            return "반지하"
+        }else{
+            return "지하${-this.floor}층" // -를 곱해서 지하를 표현
+        }
     }
+
+}
