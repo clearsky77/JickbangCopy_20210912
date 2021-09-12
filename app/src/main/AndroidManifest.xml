@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JickbangCopy_20210912">
         <activity
+            android:name=".ViewRoomDetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
