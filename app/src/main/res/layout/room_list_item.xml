@@ -17,7 +17,7 @@
             android:orientation="vertical"
             android:layout_gravity="center_vertical">
             <TextView
-                android:id="@+id/price"
+                android:id="@+id/priceTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="22sp"
@@ -25,14 +25,14 @@
                 android:textColor="#FEA409"
                 android:text="8,300 가격"/>
             <TextView
-                android:id="@+id/address"
+                android:id="@+id/addressAndFloorTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:text="동네, 층수"/>
             <TextView
-                android:id="@+id/description"
+                android:id="@+id/descriptionTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="설명 자리"/>
