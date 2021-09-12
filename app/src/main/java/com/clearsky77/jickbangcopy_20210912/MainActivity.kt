@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //임시방편: 코드에 타이핑해서 추가
-
         mRoomList.add(RoomData(9000, "서울시 동대문구", 5, "1번째 방입니다."))
         mRoomList.add(RoomData(6000, "서울시 동대문구", 5, "1번째 방입니다."))
         mRoomList.add(RoomData(9000, "서울시 동대문구", 0, "1번째 방입니다."))
@@ -26,10 +25,10 @@ class MainActivity : AppCompatActivity() {
         mRoomList.add(RoomData(9000, "서울시 동대문구", -1, "1번째 방입니다."))
         mRoomList.add(RoomData(10000, "서울시 동대문구", 1, "1번째 방입니다."))
         mRoomList.add(RoomData(12000, "서울시 동대문구", 3, "1번째 방입니다."))
-        mRoomList.add(RoomData(15000, "서울시 동대문구", 10, "1번째 방입니다."))
+        mRoomList.add(RoomData(30000, "서울시 동대문구", 10, "1번째 방입니다."))
 
         mRoomAdapter = RoomAdapter(this, R.layout.room_list_item, mRoomList)
-        roomListView.adapter = mRoomAdapter
+        roomListView.adapter = mRoomAdapter //main.xml에 listView의 어댑터가 되도록.
 
     }
 }
