@@ -11,7 +11,6 @@ class ViewRoomDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_view_room_detail)
 
         val room = intent.getSerializableExtra("roomData") as RoomData
-        //roomData라는 이름의 짐을 받는데, RoomData의 형태로 받는다.
 
         priceTxt.text = room.getFormattedPrice()
         descriptionTxt.text = room.description

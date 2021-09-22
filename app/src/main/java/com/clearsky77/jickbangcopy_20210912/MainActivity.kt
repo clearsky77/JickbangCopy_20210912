@@ -12,13 +12,12 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     val mRoomList = ArrayList<RoomData>()
-    lateinit var mRoomAdapter: RoomAdapter //lateinit은 나중에 쓴다는 뜻.
+    lateinit var mRoomAdapter: RoomAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //임시방편: 코드에 타이핑해서 추가
         mRoomList.add(RoomData(9000, "서울시 동대문구", 5, "1번째 방입니다."))
         mRoomList.add(RoomData(6000, "서울시 동대문구", 5, "1번째 방입니다."))
         mRoomList.add(RoomData(9000, "서울시 동대문구", 0, "1번째 방입니다."))
@@ -29,15 +28,14 @@ class MainActivity : AppCompatActivity() {
         mRoomList.add(RoomData(30000, "서울시 동대문구", 10, "1번째 방입니다."))
 
         mRoomAdapter = RoomAdapter(this, R.layout.room_list_item, mRoomList)
-        roomListView.adapter = mRoomAdapter //main.xml에 listView의 어댑터가 되도록.
+        roomListView.adapter = mRoomAdapter
 
         roomListView.setOnItemClickListener { adapterView, view, position, l ->
             val clickedRoom = mRoomList[position]
             val myIntent = Intent(this, ViewRoomDetailActivity::class.java)
-            myIntent.putExtra("roomData",clickedRoom) // roomData를 Serializable 명시해줌.
+            myIntent.putExtra("roomData",clickedRoom)
 
             startActivity(myIntent)
         }
-
     }
 }
